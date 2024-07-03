@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMPT- GETELEMENTBYID</title>
+</head>
+<body style="background-color: pink; color: white;">
+    <h1 style="color: rgb(245, 29, 234); font-weight: bold;">DATOS</h1>
+    <div id="nombre"></div>
+    <div id="altura"></div>
+    <div id="peso"></div>
+    <div id="IMC"></div>
+</body>
+</html>
+<script src="calculadora.js"></script>
+<script>
+    let nombre = prompt("Introduce tu nombre");
+    document.getElementById("nombre").innerHTML= "Tu nombre es: " + nombre;
+    let altura = prompt("Introduce la altura");
+    document.getElementById("altura").innerHTML= "Altura: " + altura;
+    let peso = prompt("Introduce el peso");
+    document.getElementById("peso").innerHTML= "Peso: " + peso;
+    let imc = calcular(peso,altura);
+    document.getElementById("IMC").innerHTML="IMC: " + imc;
+</script>
+
