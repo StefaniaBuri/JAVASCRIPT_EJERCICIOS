@@ -1,0 +1,15 @@
+.cuadrado {
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10PX;
+}
+
+.verde {
+    background-color: green;
+}
+
+.rojo {
+    background-color: red;
+}

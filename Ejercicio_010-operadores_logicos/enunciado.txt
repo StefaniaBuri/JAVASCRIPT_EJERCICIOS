@@ -1,0 +1,13 @@
+1. Crear una página html que tenga 2 "divs" de 100x100px
+2. La página también tendrá 2 "inputs" de tipo number"
+2. La página también tendrá un botón con el texto "Comprobar"
+3. Crear un fichero .js con las funciones:
+    3.1. comprobarSensor1()
+    3.2. comprobarSensor2()
+4. Crear un fichero css:
+    4.1. Clase verde --> Atributo background-color:"green"
+    4.2. Clase rojo --> Atributo background-color:"red"
+5. Al pulsar el botón comprobar:
+    5.1 Si el valor de alguno de los dos input es <10 ==> 
+        alert con el mensaje de "error"
+    5.2 Si no, mensaje "ok"
