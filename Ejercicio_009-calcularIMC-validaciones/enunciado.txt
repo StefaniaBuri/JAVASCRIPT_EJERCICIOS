@@ -1,0 +1,12 @@
+Crear una calculadora de IMC que solicite:
+- Nombre (Deberá contener 3 ó más caracteres)
+- Edad (Deberá ser mayor de edad)
+- Altura (Deberá estar entre el rango de 100 y 250 centímetros)
+- Peso (Deberá estar en el rango 40-200 kilos)
+
+Se mostrará un mensaje de error por cada validación no cumplida.
+Si se pasan todas las validaciones, se muestra el IMC redondeado:
+(Color amarillo) - Peso inferior al normal	Menos de 18.5
+(Color verde) - Normal	18.5 – 24.9
+(Color naranja) - Peso superior al normal 25.0 – 29.9
+(Color rojo) - Obesidad	Más de 30.0

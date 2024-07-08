@@ -14,29 +14,32 @@
         </div>
 
         <div>
-    
+            <!-- NOMBRE -->
             <div class="contenido">
                 <label for="nombre" class="label">Escribe tu nombre: </label>
-                <input type="text" name="" id="iNombre" placeholder="Introduce tu nombre">
+                <input type="text" id="iNombre" placeholder="Introduce tu nombre">
             </div>
 
+            <!-- ALTURA -->
             <div class="contenido">
                 <label for="altura" class="label">Escribe altura(cm): </label>
-                <input type="number" name="" id="iAltura" placeholder="Altura">
+                <input type="number" id="iAltura" placeholder="Altura">
             </div>
 
+            <!-- PESO -->
             <div class="contenido">
                 <label for="peso" class="label">Escribe peso(kg): </label>
-                <input type="number" name="" id="iPeso" placeholder="Peso">
+                <input type="number" id="iPeso" placeholder="Peso">
+                <span id="error-peso" class="error"></span>
             </div>
             
+            <!-- BOTON -->
             <div class="contenido">
                 <button class="button1" type="submit" onclick="calcular()">Calcular</button>
             </div>
 
         </div>
         <br>
-        <label class="contenido">Tu IMC es: </label>
         <div class="contenido" id="resultado"></div>
 
     </div>
@@ -46,9 +49,10 @@
 
 <script>
     function calcular () {
+        let nombre = document.getElementById("iNombre").value;
         let altura = document.getElementById("iAltura").value;
-        let peso = document.getElementById("iPeso").value;
+        let peso = document.getElementById("iPeso").value; 
         let imc = calcularIMC(peso,altura);
-        document.getElementById("resultado").innerHTML=imc;
+        document.getElementById("resultado").innerHTML='Hola '+ nombre + ' tu IMC es: '+ imc;
     }
 </script>

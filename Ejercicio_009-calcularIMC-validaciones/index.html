@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA IMC VALIDACIONES</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://stefaniaburi.github.io/librerias/calculadora.js"></script>
+</head>
+<body>
+    <div id="principal">
+        <div>
+            <h1>CALCULADORA ÍNDICE MASA CORPORAL</h1> 
+        </div>
+
+        <div>
+            <!-- NOMBRE -->
+            <div class="contenido">
+                <label for="nombre" class="label">Escribe tu nombre: </label>
+                <input type="text" id="nombre" placeholder="Nombre">
+            </div>
+
+            <!-- EDAD -->
+            <div class="contenido">
+                <label for="edad" class="label">Escribe tu edad: </label> <br>
+                <input type="number" id="edad" placeholder="Edad">
+            </div>
+
+            <!-- ALTURA -->
+            <div class="contenido">
+                <label for="altura" class="label">Escribe altura(cm): </label>
+                <input type="number" id="altura" placeholder="Altura">
+            </div>
+
+            <!-- PESO -->
+            <div class="contenido">
+                <label for="peso" class="label">Escribe peso(kg): </label>
+                <input type="number" id="peso" placeholder="Peso">
+            </div>
+
+            <div>
+                <span id="resultado"></span>
+                <span id="error"></span>
+            </div>
+            
+            <!-- BOTON -->
+            <div class="contenido">
+                <button id="bValidar" class="button1" onclick="validar()">Calcular</button>
+            </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var nombreUsuario;
+    /*document.querySelector("#bValidar").addEventListener("click", function() {
+        alert("Validando");
+    }) esta funcion va a sustituir al onclick*/
+
+    //FUNCION QUE REALIZA VALIDACIONES
+    function validar() {
+        nombre = document.querySelector("#nombre").value;
+        edad = document.querySelector("#edad").value;
+        altura = document.querySelector("#altura").value;
+        peso = document.querySelector("#peso").value;
+        calcular(peso, altura);
+
+        if (nombre.length < 4) {
+            escribirError("La longitud debe ser mayor que 3 caracteres", "#error-nombre");
+        } else if (edad != 18) {
+            escribirError("Debes ser mayor de edad", "#error-edad");
+        }
+
+    }
+
+    function calcular(peso,altura) {
+        alert(calcularIMC(peso,altura));
+    }
+
+</script>

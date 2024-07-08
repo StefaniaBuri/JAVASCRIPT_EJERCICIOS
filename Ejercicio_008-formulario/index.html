@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <h1>FORMULARIO</h1>
+            <input id="email" type="text" placeholder="Introduce tu email" >
+            <span id="error-email" class="error"></span>
+        
+            <input id="password" type="password" placeholder="Introduce contraseña">
+            <span id="error-pwd" class="error"></span>
+            <br>
+            <button onclick="validar()">Validar</button>
+        </div>  
+</body>
+</html>
+<script>
+    function validar() {
+        let email = document.getElementById("email").value;
+        //console.log(typeof email);
+        let pwd = document.querySelector("#password").value;
+        //console.log(typeof pwd);
+        //console.log(email, pwd);
+        
+        if(email.indexOf("@") < 0) {
+            //hay que hacer siempre primero con la referencia, por eso usamos el querySelector.
+            //document.querySelector("#error-email").innerHTML = "El email no contiene arroba";
+            escribirError("Falta el símbolo @", "#error-email");
+        } else if (email.indexOf(".") < 0) { //  !email.includes(".")  o email.includes("."==false)
+            //document.querySelector("#error-email").innerHTML = "El email no contiene punto";
+            escribirError("El email no contiene punto", "#error-email");
+        } else if (email.length < 6) { //  !email.length>5
+            escribirError("La longitud debe ser mayor que 5 caracteres", "#error-email");
+            //document.querySelector("#error-email").innerHTML = "La longitud debe ser mayor que 5 caracteres";
+        }  else {
+            escribirError("","#error-email");
+        }
+        /*else if (/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\-]+\.[A-Za-z]{2,}/.test(email)) {
+            escribirError("El email es incorrecto", "#error-email");
+        } usando expresiones regular, corregir porque no funciona*/
+
+        //Validacion password
+        if (pwd.toUpperCase().includes('A')) { //Metodo chaining
+            escribirError("La password no debe contener las letras A ni a", "#error-pwd");
+            //document.querySelector("#error-pwd").innerHTML = "La password no debe contener las letras A ni a";
+        } else if (pwd.length < 7) {
+            escribirError("La password tiene que tener mas de 6 caracteres", "#error-pwd");
+            //document.querySelector("#error-pwd").innerHTML = "La longitud de la password debe ser mayor que 6 caracteres";
+        } 
+        /*else if (pwd.toUpperCase().includes('IBM')){ //Metodo chaining
+            escribirError("La password no debe contener los caracteres IBM", "#error-pwd");
+            //document.querySelector("#error-pwd").innerHTML = "La password no debe contener los caracteres IBM";
+        } */ else if (/[Ii][Bb][Mm]/.test(pwd)) { //usando expresiones regulares
+            escribirError("La password no debe contener los caracteres IBM", "#error-pwd")
+        }
+    }
+
+    function escribirError(mensaje, identificador) {
+        document.querySelector(identificador).innerHTML= mensaje;
+
+        //OTRA OPCION CONCATENANDO, PARA QUE NOS MUESTRE A LA VEZ VARIOS MENSAJES DE VALIDACIONES: SI NO TIENE @ O PUNTO
+        /*document.querySelector(identificador).innerHTML= document.querySelector(identificador).innerHTML +" "+ mensaje;
+        LA CONDICION SERIA ESTA, DOS IF SEPARADOS PARA QUE FUNCIONE:
+        if(email.indexOf("@") < 0) {
+            //hay que hacer siempre primero con la referencia, por eso usamos el querySelector.
+            //document.querySelector("#error-email").innerHTML = "El email no contiene arroba";
+            escribirError("Falta el símbolo @", "#error-email");
+        } 
+        if (email.indexOf(".") < 0) {
+            //document.querySelector("#error-email").innerHTML = "El email no contiene punto";
+            escribirError("El email no contiene punto", "#error-email");
+        }*/
+
+    }
+
+
+</script>

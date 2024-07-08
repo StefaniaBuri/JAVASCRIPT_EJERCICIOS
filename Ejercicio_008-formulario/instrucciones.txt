@@ -1,0 +1,7 @@
+Crear un sistema de validación de credenciales:
+    - El email tiene que contener una @
+    - El email tiene que contener un .
+    - El email tiene que tener una longitud > 5
+    - Password no puede contener la letra A ni a
+    - Password tiene que tener una longitud > 6
+    - Password no puede contener la cadean IBM ni mayúsculas ni minúsculas
