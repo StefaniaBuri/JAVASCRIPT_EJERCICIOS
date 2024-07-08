@@ -38,46 +38,17 @@
                 <input type="number" id="peso" placeholder="Peso">
             </div>
 
-            <div>
-                <span id="resultado"></span>
-                <span id="error"></span>
-            </div>
+            <!-- RESULTADO/ERROR -->
+            <span id="resultado"></span>
+            <span id="error"></span>
             
             <!-- BOTON -->
             <div class="contenido">
-                <button id="bValidar" class="button1" onclick="validar()">Calcular</button>
+                <button class="button1" onclick="comenzarCalculoIMC()">Calcular</button>
             </div>
 
     </div>
 
 </body>
 </html>
-
-<script>
-
-    var nombreUsuario;
-    /*document.querySelector("#bValidar").addEventListener("click", function() {
-        alert("Validando");
-    }) esta funcion va a sustituir al onclick*/
-
-    //FUNCION QUE REALIZA VALIDACIONES
-    function validar() {
-        nombre = document.querySelector("#nombre").value;
-        edad = document.querySelector("#edad").value;
-        altura = document.querySelector("#altura").value;
-        peso = document.querySelector("#peso").value;
-        calcular(peso, altura);
-
-        if (nombre.length < 4) {
-            escribirError("La longitud debe ser mayor que 3 caracteres", "#error-nombre");
-        } else if (edad != 18) {
-            escribirError("Debes ser mayor de edad", "#error-edad");
-        }
-
-    }
-
-    function calcular(peso,altura) {
-        alert(calcularIMC(peso,altura));
-    }
-
-</script>
+<script src="calculador.js"></script>

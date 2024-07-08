@@ -47,6 +47,11 @@ h1 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   
-  .error {
-    color: red;
-  }
+span#resultado, span#error {
+    font-weight: bold;
+    color: #d9534f; /* Color rojo para el error */
+}
+
+  span#resultado {
+    color: #5cb85c; /* Color verde para el resultado */
+}
