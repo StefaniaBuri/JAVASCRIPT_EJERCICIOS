@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARRAYS</title>
+    <title>Arrays</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <button id="botonMas" onclick="aumentar()">+</button>
+        <button id="botonMenos">-</button>
+    </div>
+    <div class="cover"><img src="./images/cover1.jpg"></div>
+    <div class="cover"><img src="./images/cover2.jpg"></div>
+    <div class="cover"><img src="./images/cover3.jpg"></div>
+    <div class="cover"><img src="./images/cover4.jpg"></div>
+    <div class="cover"><img src="./images/cover5.jpg"></div>
+    <div class="cover"><img src="./images/cover6.jpg"></div>
     
 </body>
 </html>
 <script>
-    
+     /*document.querySelector("#botonMenos").addEventListener("click", () => {
+    }) FUNCION FLECHA*/
+
+    /*
+    Ejemplos si empieza por minuscula(objeto), si es en mayuscula(clase)
+    x.y -> objeto + atributo
+    x.y() -> objeto + metodo
+    X.y -> clase + atributo
+    X.y() -> clase + metodo de la clase
+    */
+
+    let ancho = 200;
+    function aumentar() {
+        ancho++;
+        let caratulas = document.getElementsByClassName("cover");
+        console.log(caratulas.length);
+        Array.from(caratulas).forEach(caratula => { //Array.from -> metodo static, Array es un nombre de clase x eso empieza por mayuscula y from es un metodo de la clase Array.
+            //caratula.style.width=ancho+"px"; concatenando cadenas
+            caratula.style.width=`${ancho}px`; //Interpolacion de cadenas
+        });
+    }
+
+    document.querySelector("#botonMenos").addEventListener("click", function(){ //FUNCION ANONIMA
+        ancho--;
+        let caratulas = document.getElementsByClassName("cover");
+        //let caratulas = document.querySelectorAll(".cover");
+        console.log(caratulas.length);
+        Array.from(caratulas).forEach(caratula => {
+            //caratula.style.width=ancho+"px"; concatenando cadenas
+            caratula.style.width=`${ancho}px`; //Interpolacion de cadenas
+        });
+    });
+
 </script>
