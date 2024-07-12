@@ -1,0 +1,75 @@
+#iAgregar {
+    background-color:deeppink;
+    color:white;
+}
+#Guardar {
+    background-color:darkcyan;
+    color:white;
+}
+body {
+    margin-left: 60px;
+}
+
+#formulario {
+    margin-left: 100px;
+}
+
+input {
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+button {
+    margin-left: 10px;
+    font-size: 1em;
+    padding: 0.3em;
+}
+
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 80px;
+    text-align: center;
+    color:rgb(107, 5, 138);
+}
+
+.poke {
+    float:left;
+    width: 300px;
+    height: 550;
+    background-color: #ffb5c5;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.poke img {
+    width: 50%;
+}
+
+.nombre-poke {
+    text-transform: uppercase;
+    color:rgb(107, 5, 138);
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    font-weight: 100;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.tipo-poke {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.descripcion-poke {
+    font-family:'Courier New', Courier, monospace;
+    font-size: smaller;
+}
+
+.foto-poke {
+    margin: 15px;
+    text-align: center;
+}
