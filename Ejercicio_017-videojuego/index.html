@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuego</title>
+    <script src="player.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="600" style="border:1px solid #000000;">
+
+    </canvas> 
+    <button id="bMover">Mover</button>
+</body>
+</html>
+<script>
+    let p1 = new Player("nave.png",10,200,1);
+    let p2 = new Player("nave.png",200,200,2);
+    let players = [p1, p2];
+    document.querySelector("#bMover").addEventListener("click",()=>{
+        p1.moverse(1);
+        p2.moverse(-1);
+    })
+    setInterval(()=>{
+        let c = document.querySelector("#myCanvas");
+        let ctx = c.getContext("2d");
+        ctx.clearRect(0,0,400,600);
+        players.map(player=>player.dibujar());
+    },0.16);
+</script>

@@ -1,5 +1,13 @@
-
-
+ /*
+Atributos:
+    - sprite
+    - posición
+    - estado
+Métodos:
+    - disparar
+    - explotar
+    - mover
+*/
 
 //CREACION DE UN OBJETO CON SUS ATRIBUTOS
 let enemigo1 = {
