@@ -1,0 +1,44 @@
+
+[
+    {
+        "nombre": "Amigos Imaginarios",
+        "genero": "Comedia",
+        "fecha": 2024,
+        "caratula" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQShR6WZDqDqAKUNsueoBKQ_ewHr3gpHEwNb5GfcOqKWre3e2ga",
+        "Actores":{
+            "Principal" : "Ryan Reynolds",
+            "secundario" : "Cailey Fleming"
+        }
+    },
+    {
+        "nombre": "Amélie",
+        "genero": "Romance",
+        "fecha": 2001,
+        "caratula" : "https://hips.hearstapps.com/hmg-prod/images/amelie-fotogramas-1612347086.jpg",
+        "Actores":{
+            "Principal" : "Audrey Tautou",
+            "secundario" : "Jean-Pierre Jeunet"
+        }
+    },
+    {
+        "nombre": "Vértigo (De entre los muertos)",
+        "genero": "Suspense",
+        "fecha": 1958,
+        "caratula" : "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/giros-de-guion-40-peliculas-con-final-sorpresa/peliculas_con_finales_sorprendentes_vertigo/138080162-1-esl-ES/peliculas_con_finales_sorprendentes_vertigo.jpg",
+        "Actores":{
+            "Principal" : "Kim Novak",
+            "secundario" : "James Stewart"
+        }
+    },
+    {
+        "nombre": "¡Olvídate de mí!",
+        "genero": "Ciencia ficción",
+        "fecha": 2004,
+        "caratula" : "https://hips.hearstapps.com/hmg-prod/images/olvidate-de-mi-1553001842.jpg",
+        "Actores":{
+            "Principal" : "Jim Carrey",
+            "secundario" : "Kate Winslet"
+        }
+    }
+   
+]
