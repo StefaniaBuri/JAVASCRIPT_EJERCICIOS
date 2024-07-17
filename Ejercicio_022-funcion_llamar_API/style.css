@@ -1,0 +1,38 @@
+.pelicula {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#contenedor-peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#formulario {
+    text-align: center;
+}
+
+#formulario input,
+#formulario button {
+    padding: 10px;
+}
