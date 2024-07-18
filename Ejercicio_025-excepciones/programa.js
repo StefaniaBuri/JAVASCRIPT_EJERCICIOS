@@ -36,6 +36,7 @@ try {
     }
 catch (e) {
     console.error(e.message);
+    writeLog(e.message);
 } finally { // EL BLOQUE FINALLY siempre se ejecuta
     console.log("Hemos terminado el proceso");
 }
