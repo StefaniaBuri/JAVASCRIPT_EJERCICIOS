@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJEMPLO CLASSLIST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <span id="mensaje"> Introduce el nombre: </span>
+    <input type="text" id="nombre" placeholder="Nombre" />
+  </body>
+</html>
+<script>
+  document.querySelector("#nombre").addEventListener("keyup", (evento) => {
+    //console.log(evento.key);
+    const texto = document.querySelector("#nombre").value;
+    if (texto.length >= 5) {
+      document.querySelector("#mensaje").classList.add("rojo");
+    } else {
+      document.querySelector("#mensaje").classList.remove("rojo");
+    }
+    if (texto.length >= 7) {
+      document.querySelector("#mensaje").classList.add("negrita");
+    } else {
+      document.querySelector("#mensaje").classList.remove("negrita");
+    }
+    if (texto.length >= 10) {
+      document.querySelector("#mensaje").classList.replace("rojo", "verde");
+    } else {
+      document.querySelector("#mensaje").classList.replace("verde", "rojo");
+    }
+  });
+</script>

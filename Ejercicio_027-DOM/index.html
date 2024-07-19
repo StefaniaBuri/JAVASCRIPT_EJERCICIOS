@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creacion de elementos en DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body></body>
+</html>
+<script>
+  let encabezado = document.createElement("h1");
+  document.querySelector("body").appendChild(encabezado);
+
+  let textoEncabezado = document.createTextNode("Seccion Principal");
+  encabezado.appendChild(textoEncabezado);
+
+  //Creacion de un atributo creando el elemento
+  let atributoClassDivEncabezado = document.createAttribute("class");
+  atributoClassDivEncabezado.value = "rojo";
+  encabezado.setAttributeNode(atributoClassDivEncabezado);
+
+  //Creacion de un atributo mediante el metodo setAttribute
+  encabezado.setAttribute("id", "encabezado1");
+
+  //EL TITULO CAMBIE DE COLOR TODO EL tiempo
+  setInterval(() => {
+    //OPCION 1
+    /*
+    if (atributoClassDivEncabezado.value === "verde") {
+      atributoClassDivEncabezado.value = "rojo";
+    } else {
+      atributoClassDivEncabezado.value = "verde";
+    }*/
+
+    //OPCION 2 - expresion ternaria
+    atributoClassDivEncabezado.value =
+      atributoClassDivEncabezado.value === "verde" ? "rojo" : "verde";
+  }, 1000);
+</script>
