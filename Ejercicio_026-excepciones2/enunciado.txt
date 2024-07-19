@@ -1,0 +1,8 @@
+Crear un array con el nombre de 5 paises.
+Crear una función con el nombre organizarViaje que reciba como argumentos:
+- Nombre de país (debe ser uno de la lista)
+- Número de viajeros (pax) (debe ser un número >=1 y <=4).
+- Número de días (debe ser un número >=5 y <=10).
+
+La función devolverá el texto: "Se ha reservado un viaje a xxx de yyy días para zzz personas".
+Si no se cumple alguna de las condiciones lanzar una exception (Error).
