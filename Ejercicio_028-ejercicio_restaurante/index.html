@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RESTAURANTES</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="iFiltro" placeholder="Filtrar" />
+    </div>
+    <div id="restaurantes">
+      <!--
+      <div class="restaurante">
+        <div class="imagen">
+          <img src="./imagenes/bandejapaisa.jpg" />
+        </div>
+        <div class="descripcion">
+          <div class="nombre">El Sabroso</div>
+          <div class="tipo">Americano</div>
+          <div class="precio">16€</div>
+        </div>
+      </div>
+      <hr />
+      -->
+    </div>
+  </body>
+</html>
+<script src="scripts/generadorFilas.js"></script>
+<script src="scripts/http-client.js"></script>
+<script>
+  //Primer paso: cambiamos el ambito del array de restaurantes para que sea global
+  var arrayRestaurantes;
+
+  document.querySelector("#iFiltro").addEventListener("keyup", () => {
+    let texto = document.querySelector("#iFiltro").value;
+    let restaurantesFiltrado = arrayRestaurantes.filter((restaurante) => {
+      return restaurante.nombre.includes(texto);
+    });
+
+    document.querySelector("#restaurantes").innerHTML = "";
+    restaurantesFiltrado.forEach((restaurante) => {
+      crearFila(
+        restaurante.imagen,
+        restaurante.nombre,
+        restaurante.estilo,
+        restaurante.precio
+      );
+    });
+  });
+
+  doGetHTTPRequest(
+    "http://127.0.0.1",
+    "5500",
+    "/restaurantes.json",
+    procesarRestaurantes,
+    procesarError
+  );
+
+  function procesarRestaurantes(texto) {
+    //console.log(texto);
+    let objetoServidor = JSON.parse(texto);
+    arrayRestaurantes = objetoServidor.restaurantes; //restaurantes viene del json
+    //console.log(arrayRestaurantes);
+
+    arrayRestaurantes.forEach((restaurante) => {
+      crearFila(
+        restaurante.imagen,
+        restaurante.nombre,
+        restaurante.estilo,
+        restaurante.precio
+      );
+    });
+  }
+
+  function procesarError(err) {
+    console.log(err);
+  }
+</script>

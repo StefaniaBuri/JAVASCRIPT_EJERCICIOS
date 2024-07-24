@@ -1,0 +1,22 @@
+{
+    "restaurantes": [
+        {
+            "imagen": "./imagenes/bandejapaisa.jpg",
+            "nombre": "El Sabroso",
+            "estilo": "Latina",
+            "precio": 20
+        },
+        {
+            "imagen": "./imagenes/bupa.jpg",
+            "nombre": "Tapeo",
+            "estilo": "Española",
+            "precio": 35
+        },
+        {
+            "imagen": "./imagenes/lasaña.jpg",
+            "nombre": "Tagliatella",
+            "estilo": "Italiano",
+            "precio": 15
+        }
+    ]
+} 

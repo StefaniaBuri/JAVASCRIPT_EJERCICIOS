@@ -1,0 +1,40 @@
+
+#programa {
+    width: 100%;
+}
+
+.programas {
+    width: 98%;
+    height: 100px;
+    background-color: deeppink;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    padding: 1%;
+    transition: all 0.25s;
+}
+.programas:hoover {
+     border-color: rgb(128, 128, 128, 0.136);
+     box-shadow: 2px 2px rgb(200, 200, 200);
+}
+
+img { 
+    width: 30%;
+    display:inline;
+
+}
+.imagen {
+    float: left;
+}
+.imagen img {
+    height: 100px;
+    border-radius: 10px;
+}
+.descripcion {
+    float: left;
+}
+
+footer {
+    float: left;
+}
